@@ -59,7 +59,8 @@ var userGuess = function(){
 };
 
 function correct(){
-    if (userGuess() === questions[0].correctAnswer);{
+    if (userGuess() === questions[0].correctAnswer)
+    {
        alert("That's correct!");
 }   else {
         alert("That's incorrect!");
