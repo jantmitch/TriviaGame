@@ -28,7 +28,7 @@ var questions = [
 ];
 
 
-$(document).on("click", "#start", function () {
+$(document).on("click", "#start", function startGame() {
     var answerBtn = $("<div class = 'buttons>");
     $("#text").html(questions[0].question);
     $("#btn1").html(questions[0].answers[0]);
@@ -39,7 +39,7 @@ $(document).on("click", "#start", function () {
     countdown();
     
 
-var timeLeft = 120;
+var timeLeft = 15;
 var timerId = setInterval(countdown, 1000);
 
 function countdown() {
@@ -51,11 +51,22 @@ function countdown() {
     timeLeft--;
   }
 }
+
 });
 
-function correct(){
-    
+var userGuess = function(){
+    $("<button>").on("click")
 };
+
+function correct(){
+    if (userGuess() === questions[0].correctAnswer);{
+       alert("That's correct!");
+}   else {
+        alert("That's incorrect!");
+    }
+};
+
+
 
 
 
