@@ -1,0 +1,30 @@
+body {
+    background-image: url("https://wallpapercave.com/wp/TiClkkG.jpg");
+    background-repeat: repeat-x;
+    padding-top: 22%;
+}
+
+#start-panel {
+   text-align: center;
+  
+}
+
+.panel-title {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+#buttons {
+    text-align: center;
+}
+
+#display {
+    text-align: center;
+    color: white;
+    font-size: 30px;
+}
+
+#answers {
+    align-items: center;
+    color: white;
+}
