@@ -31,10 +31,15 @@ var questions = [
 $(document).on("click", "#start", function () {
     var answerBtn = $("<div class = 'buttons>");
     $("#text").html(questions[0].question);
+    $("#btn1").html(questions[0].answers[0]);
+    $("#btn2").html(questions[0].answers[1]);
+    $("#btn3").html(questions[0].answers[2]);
+    $("#btn4").html(questions[0].answers[3]);
+    $("#btn5").html(questions[0].answers[4]);
     countdown();
-    answerButtons();
+    
 
-var timeLeft = 15;
+var timeLeft = 120;
 var timerId = setInterval(countdown, 1000);
 
 function countdown() {
@@ -48,40 +53,33 @@ function countdown() {
 }
 });
 
-function answerButtons() {
-    var answersArray = 
-    // Deletes the movies prior to adding new movies
-    // (this is necessary otherwise you will have repeat buttons)
-    $("#answers").empty();
-    // Loops through the array of movies
-    for (var i = 0; i < answersArray.length; i++) {
-
-      // Then dynamicaly generates buttons for each movie in the array
-      // This code $("<button>") is all jQuery needs to create the beginning and end tag. (<button></button>)
-      var answer = $("<button>");
-      // Adds a class of movie to our button
-      answer.addClass("answerText");
-      // Added a data-attribute
-      answer.attr("name", questions.answers[i]);
-      // Provided the initial button text
-      answer.text(answer[i]);
-      // Added the button to the buttons-view div
-      $("#answers").append(answer);
-    };
+function correct(){
+    
 };
 
 
 
 
+// function answerButtons() {
+//     // var answersArray = questions[0].answers;
+//     // Deletes the movies prior to adding new movies
+//     // (this is necessary otherwise you will have repeat buttons)
+//     $("#answers").empty();
+//     // Loops through the array of movies
+//     for (var i = 0; i < questions[0].answers.length; i++) {
 
-
-
-
-
-
-
-// document.onclick(function(){
-
-//     console.log(wrongAnswers.two[1]);
-
+//       // Then dynamicaly generates buttons for each movie in the array
+//       // This code $("<button>") is all jQuery needs to create the beginning and end tag. (<button></button>)
+//       var answer = $("<button>");
+//       // Adds a class of movie to our button
+//       answer.addClass("answerText");
+//       // Added a data-attribute
+//     //   answer.attr("name", questions.answers[i]);
+//       // Provided the initial button text
+//       answer.text(answer[i]);
+//       // Added the button to the buttons-view div
+//       $("#answers").append(answer);
+//       console.log(answer);
+//     };
+// };
 // });
